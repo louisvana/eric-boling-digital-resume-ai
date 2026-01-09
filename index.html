@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eric Boling | Digital Media Strategist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              brand: {
+                dark: '#000000', // Pitch black
+                surface: '#0b101b',
+                accent: '#38bdf8', // Sky 400 (keep for legacy match)
+                purple: '#a78bfa',
+                gemini: {
+                  start: '#4285f4',
+                  middle: '#9b72cb',
+                  end: '#d96570',
+                }
+              }
+            },
+            backgroundImage: {
+              'gemini-gradient': 'linear-gradient(to right, #4285f4, #9b72cb, #d96570)',
+              'gemini-shine': 'linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 50%, transparent 75%)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'scroll': 'scroll 30s linear infinite',
+              'shimmer': 'shimmer 2.5s linear infinite',
+              'aurora': 'aurora 10s ease infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '200% 0' },
+                '100%': { backgroundPosition: '-200% 0' }
+              },
+              aurora: {
+                '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+                '50%': { transform: 'translate(-20px, 20px) scale(1.1)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --gemini-blue: #4285f4;
+        --gemini-purple: #9b72cb;
+        --gemini-pink: #d96570;
+      }
+      
+      body {
+        background-color: #000000;
+        color: #e2e8f0;
+        overflow-x: hidden;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #4285f4, #9b72cb);
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #4285f4, #d96570);
+      }
+
+      /* Utility for gradient text */
+      .text-gradient {
+        background: linear-gradient(to right, #4285f4, #9b72cb, #d96570);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
