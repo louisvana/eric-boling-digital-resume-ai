@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { PORTFOLIO_DATA } from '../../constants';
+import { PORTFOLIO_DATA } from '../constants';
 import { Sparkles, ArrowRight, ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
